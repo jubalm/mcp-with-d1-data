@@ -1,0 +1,45 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "mcp-agent-d1",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-04-29",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"migrations": [
+		{
+			"new_sqlite_classes": [
+				"MyMCP"
+			],
+			"tag": "v1"
+		}
+	],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": "./public"
+	},
+	"durable_objects": {
+		"bindings": [
+			{
+				"class_name": "MyMCP",
+				"name": "MY_MCP"
+			}
+		]
+	},
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "mcp-agent-d1-data",
+			"database_id": "feb98d85-8293-49d8-9e3a-4acbeeea554c"
+		}
+	],
+	"kv_namespaces": [
+		{
+			"binding": "DB_CACHE",
+			"id": "1ea7c75508d54778b78e7dd931d380ff"
+		}
+	]
+}

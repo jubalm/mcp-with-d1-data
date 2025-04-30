@@ -1,0 +1,9 @@
+{
+	"servers": {
+		"Vehicle Compliance": {
+			"type": "sse",
+			"url": "http://localhost:8787/sse"
+			// "url": "https://mcp-agent-d1.bytebros.workers.dev/sse"
+		}
+	}
+}
